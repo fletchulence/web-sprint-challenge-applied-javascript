@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-// const tabs = 
-
 const Tabs = (topics) => {
   // TASK 3
   // ---------------------
@@ -17,19 +15,22 @@ const Tabs = (topics) => {
   //   <div class="tab">technology</div>
   // </div>
   //
-  const topicsMainD = document.createElement('div');
-    topicsMainD.classList.add('topics');
+
+      //! create the outer div and call it mainDiv
+  const mainDiv = document.createElement('div');
+    mainDiv.classList.add('topics');
     
+      //! iterate array of topics for var called tabContent such that what comes in is what goes out
+      //! i guess i could have done it one by one, but this was way more fun
   topics.forEach(el => {
-    const tab = document.createElement('div');
-      tab.classList.add('tab');
-      tab.textContent = el;
-      topicsMainD.appendChild(tab);
+    const tabContent = document.createElement('div');  //* creating a tabContent var which will fill the mainDiv with the properly iterated information
+      tabContent.classList.add('tab');          //* div.tab
+      tabContent.textContent = el;             //* whatever gets put in is what gets spat out as content
+      mainDiv.appendChild(tabContent);         //* appending tabContent container to mainDiv of our 
    });
 
-  //console.log(topics)
-  console.log(topicsMainD)
-  return topicsMainD;
+  //console.log(mainDiv)      //TODO: check to make sure the output of the largest container is/has what you want
+  return mainDiv;
 }
 
 
@@ -45,20 +46,20 @@ const tabsAppender = (selector) => {
   const tabData = axios.get(`http://localhost:5000/api/topics`)
     .then(res => {
       //console.log(res.data.topics);
-      const promise = Tabs(res.data.topics); //! invoke the function above on the correct data and console.log result in Tab
+      //! invoke Tab function on the correct data and put it into something called promise
+      const promise = Tabs(res.data.topics); 
       
-      //! now append
-      const tab = document.querySelector(selector)
-        tab.appendChild(promise)
+      const tab = document.querySelector(selector) //! now direct the function and data where to go
+        tab.appendChild(promise) //! append it!
     })
     .catch(err => {
       console.error(err)
     })
     .finally(() =>{
-      console.log('who can do this')
+      console.log('its wOrKiNg!')
     })
   
-  return tabData;
+  return tabData; //* this helped me view how the promise was coming out, tho i dont think you need to do it this way
 }
 
 export { Tabs, tabsAppender }
