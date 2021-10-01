@@ -26,7 +26,7 @@ const Header = (title, date, temp) => {
 
   header.append(dateSpan, titleH, tempSpan);
 
-  console.log(header) //TODO: take this out
+  //console.log(header) //TODO: take this out
 
   
 
@@ -44,7 +44,7 @@ const headerAppender = (selector) => {
   //
   
     const head = document.querySelector(selector);
-    console.log(head) //TODO: take this out
+    //console.log(head) //TODO: take this out
      
     head.appendChild(Header('Lambda Times', 'January 6, 2021', `26˚`));
 
@@ -57,7 +57,7 @@ export { Header, headerAppender }
 
 
 // ! if i do this later, good to note down
-// *const divs = document.querySelectorAll('div');
-//  * const divsArr = Array.from(divs);
+// const divs = document.querySelectorAll('div');
+//  const divsArr = Array.from(divs);
 
-//   *console.log(divsArr);
+//  console.log(divsArr);
