@@ -49,17 +49,20 @@ const tabsAppender = (selector) => {
       //! invoke Tab function on the correct data and put it into something called promise
       const promise = Tabs(res.data.topics); 
       
-      const tab = document.querySelector(selector) //! now direct the function and data where to go
-        tab.appendChild(promise) //! append it!
+      const tab = document.querySelector(selector); //! now direct the function and data where to go
+        
+      tab.appendChild(promise);   //! APPEND it!
     })
     .catch(err => {
       console.error(err)
     })
     .finally(() =>{
-      console.log('its wOrKiNg!')
+      console.log('its wOrKiNg!')      //? is this thing on??
     })
   
-  return tabData; //* this helped me view how the promise was coming out, tho i dont think you need to do it this way
+  return tabData;   
+  //* the above return helped me view how the promise was coming out
+  //? are there other ways to do it? 
 }
 
 export { Tabs, tabsAppender }

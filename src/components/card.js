@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const Card = (article) => {
   // TASK 5
   // ---------------------
@@ -16,7 +18,41 @@ const Card = (article) => {
   //     <span>By { authorName }</span>
   //   </div>
   // </div>
-  //
+  
+  //article.forEach(el => {
+    const cardContainer = document.createElement('div');
+    const headline = document.createElement('div');
+    const author = document.createElement('div');
+    const imgCont = document.createElement('div');
+    const img = document.createElement('img');            //TODO: there needs to be an img.src in here
+    const span = document.createElement('span');          //TODO: make sure you add the string in here
+
+    cardContainer.classList.add('card');
+    headline.classList.add('headline');
+    author.classList.add('author');
+    imgCont.classList.add('img-container');
+
+    headline.textContent = article.headline;
+    span.textContent = `By ${article.authorName}`;
+    
+    img.setAttribute('src', '');                          //TODO: what is authorName
+    img.src = article.authorPhoto;
+
+    cardContainer.appendChild(headline);
+    cardContainer.appendChild(author);
+    author.appendChild(imgCont);
+    author.appendChild(span);
+    imgCont.appendChild(img);
+    
+    cardContainer.addEventListener('click', (() =>{
+      console.log(headline)
+    }));
+    
+    
+    console.log(cardContainer);
+    return cardContainer;
+  //})
+
 }
 
 const cardAppender = (selector) => {
@@ -28,6 +64,40 @@ const cardAppender = (selector) => {
   // Create a card from each and every article object in the response, using the Card component.
   // Append each card to the element in the DOM that matches the selector passed to the function.
   //
-}
 
+  const arrayInfo = axios.get(`http://localhost:5000/api/articles`)
+    .then(res => {
+      console.log(res.data.articles.javascript[0]);
+      const array = (res.data.articles.javascript);
+      const promise = Card(array[0]);
+      //console.log(arrayTabs);  
+      
+      
+      //todo "javascript"
+      
+      
+      //todo "bootstrap"
+      
+      
+      //todo "technology"
+      
+      
+      //todo "jquery"
+      
+      
+      //todo "node.js"
+      
+      
+      document.querySelector(selector).appendChild(promise)
+    })
+    .catch(err => {
+      console.error(err)
+    })
+    .finally(() => {
+      console.log('well its going thry=u')
+    })
+    
+    return arrayInfo;
+  }
+  
 export { Card, cardAppender }
