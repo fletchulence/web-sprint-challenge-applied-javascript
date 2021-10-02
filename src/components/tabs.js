@@ -27,6 +27,14 @@ const Tabs = (topics) => {
       tabContent.classList.add('tab');          //* div.tab
       tabContent.textContent = el;             //* whatever gets put in is what gets spat out as content
       mainDiv.appendChild(tabContent);         //* appending tabContent container to mainDiv of our 
+      //FOR STRETCH:
+      tabContent.addEventListener('click', function(event) {
+        //el.stopPropagation()
+        console.log(el)
+        
+        //return event.el.classList.toggle('cards.container');
+      })
+      
    });
 
   //console.log(mainDiv)      //TODO: check to make sure the output of the largest container is/has what you want
