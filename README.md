@@ -61,21 +61,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is the DOM?
 
-    - DOM stands for Document Object Model. It is, very basically, a roadmap for what your site will look like. If you would like to append things to the DOM, they will show up in the browser. Objects that are not appended in one way or another (_prepend_) will not show. You append things to your DOM thru JS 
+    - DOM stands for Document Object Model. It is, very basically, a roadmap for what your site will look like. If you would like to append things to the DOM, they will show up in the browser. Objects that are not appended in one way or another to the dom ( or _prepend_ ) will not show to the user.
 
 2. What is an event?
 
-    * an event is something 
+    * An event is very basically a user interaction with the browser. Click, scroll, input - they are all Events that the user 
     
-    @@*********@@- NOT DONE HERE -@@*******@@
-
 3. What is an event listener?
 
-    * an event listener is something that JS looks for as interaction from the user. If the user clicks, scrolls, types, focuses(tabs into a text input) JS knows to respond in a certain way for UI purposes. For example, if the user wants the user to click on text (in this case), they can do many things to the text as the mouse moves over it (bold text, background change, cursor change). Another example of an eventListener is a click from the user to change the way the browser looks
+    * an event listener is something that JS looks for as interaction from the user. If the user clicks, scrolls, types, focuses(tabs into a text input) JS knows to respond in a certain way for UI purposes. For example, if the user wants the user to click on text (in this case), they can do many things to the text as the mouse moves over it (bold text, background change, cursor change). Another example of an eventListener is a click from the user to change the way the browser looks.
 
 4. Why would we convert a NodeList into an Array?
 
-    the purposes of converting a nodelist into an array is for functionality and usability. While NodeList is a list of things in array format which can tell you what you can use
+    We would convert a NodeList into an Array so that we can perform array methods on it. The purposes of converting a nodelist into an array is for functionality and usability. While NodeList is a list of things in array format which can tell you what you can use
     
 ****** go to MONDAY OR TUESDAY 
 
