@@ -15,7 +15,7 @@ const Tabs = (topics) => {
   //   <div class="tab">technology</div>
   // </div>
   //
-
+ 
       //! create the outer div and call it mainDiv
   const mainDiv = document.createElement('div');
     mainDiv.classList.add('topics');
