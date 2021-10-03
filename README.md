@@ -65,7 +65,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 2. What is an event?
 
-    * An event is very basically a user interaction with the browser. Click, scroll, input - they are all Events that the user 
+    * An event is very basically a user interaction with the browser. Click, scroll, input - they are all interactive elements which are a huge crux and benefit/plus of javascript. Because of JS, we have this functionality. Events are referred to as triggers because they set off another reaction for JS to respond to.
     
 3. What is an event listener?
 
@@ -73,17 +73,10 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 4. Why would we convert a NodeList into an Array?
 
-    We would convert a NodeList into an Array so that we can perform array methods on it. The purposes of converting a nodelist into an array is for functionality and usability. While NodeList is a list of things in array format which can tell you what you can use
-    
-****** go to MONDAY OR TUESDAY 
-
-    @@*********@@- NOT DONE HERE -@@*******@@
-
+    -We would convert a NodeList into an Array so that we can perform array methods on it. The purposes of converting a nodelist into an array is for functionality and usability. While NodeList is a list of items in the format of an array, you cant use the correct array methods that you would want to
 
 
 5. What is a component?
 
-    - a component is basically a function that does something specific..
-    == look at tuesday;s lesson
-
-    @@*********@@- NOT DONE HERE -@@*******@@
+    - a component is basically a function that does something specific. Meaning the handle one peice of information in a larger part of the whole. We have the ability to edit, build as many components as we see fit using loops if we wish to. 
+    "modular piece of code"

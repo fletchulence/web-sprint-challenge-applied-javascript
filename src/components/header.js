@@ -28,10 +28,7 @@ const Header = (title, date, temp) => {
 
   //console.log(header) //TODO: take this out
 
-  
-
-  //Header.appendChild(header)
-  return header;
+    return header;
   
 }
 
